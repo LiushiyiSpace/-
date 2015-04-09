@@ -1,0 +1,38 @@
+#include <iostream>
+using namespace std;
+class father
+{
+protected:
+	int fathertall,fatherweight;
+public:
+	void setfathertall(int fathersTall){fathertall=fathersTall;}
+	void setfatherweight(int fathersWeight){fatherweight=fathersWeight;}
+	/*void print1()
+	{
+		cout<<"父亲的身高"<<fathertall<<endl;
+	    cout<<"父亲的体重"<<fatherweight<<endl;
+	}  */
+};
+	class son :public father{
+	private:
+		int sonlong,sonwidth;
+	public:
+    void setsonlong(int sonslong){sonlong=sonslong;}
+	void setsonwidth(int sonswidth){sonwidth=sonswidth;}
+	void print2()
+	{   
+		cout<<"父亲的身高"<<fathertall<<"\t"<<"父亲的体重"<<fatherweight<<endl;
+		cout<<"儿子的臂长"<<sonlong<<"\t"<<"儿子的肩宽"<<sonwidth<<endl;
+	}  
+	};
+int main()
+	{
+	son mike;
+	mike.setfathertall(180);
+	mike.setfatherweight(80);
+	mike.setsonlong(134);
+	mike.setsonwidth(65);
+	//mike.print1();
+	mike.print2();
+	return 0;
+	}
